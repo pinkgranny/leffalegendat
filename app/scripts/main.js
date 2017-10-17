@@ -1,12 +1,14 @@
 'use strict';
 
-import {MDCToolbar} from '@material/toolbar';
+// import {MDCToolbar} from '@material/toolbar';
 import ChannelGuide from './views/ChannelGuide';
 import config from '../../config.json';
 import CryptoJS from 'crypto-js';
 import fetchp from 'fetch-jsonp';
 import Player from './views/Player';
-import Toolbar from './views/Toolbar';
+// import Toolbar from './views/Toolbar';
+import Search from './views/Search';
+
 
 /**
  * Fetch the current TV shows using JSONP and fetch JSONP polyfill.
@@ -208,11 +210,11 @@ async function handleRouteChange() {
       const channelId = segments[1];
       // Just use the programs that are specific for this channel
       const filtered = programs.filter((p) => p.channelId === channelId );
-      const currentProgram = filtered.find((p) => p.channelId === channelId) || filtered[0];
+      // const currentProgram = filtered.find((p) => p.channelId === channelId) || filtered[0];
 
-      toolbar.program = currentProgram;
-      toolbar.channels = channels;
-      toolbar.render();
+      // toolbar.program = currentProgram;
+      // toolbar.channels = channels;
+      // toolbar.render();
       guide.programs = filtered;
       guide.render();
       return;
@@ -227,6 +229,9 @@ async function handleRouteChange() {
       player.program = program;
       player.render();
       return;
+    case 'haku':
+      searchView.render();
+      return;
     default:
       console.log(`No route handler found for ${hashPart}`);
       return init();
@@ -234,11 +239,11 @@ async function handleRouteChange() {
 }
 
 // Attach dynamic behaviour to the MDC toolbar element
-const mdcToolbar = MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
-mdcToolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
+// const mdcToolbar = MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
+// mdcToolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
 
 // UI elements we bind to
-const header = document.querySelector('header');
+// const header = document.querySelector('header');
 const main = document.querySelector('main');
 
 // API configuration
@@ -249,7 +254,10 @@ let channels = [];
 let programs = [];
 
 // UI Elements
-const toolbar = new Toolbar(header);
+// const toolbar = new Toolbar(header);
+
+const searchView = new Search(main);
+
 const guide = new ChannelGuide(main);
 const player = new Player(main);
 

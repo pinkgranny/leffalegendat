@@ -1,4 +1,4 @@
-import {bind} from 'hyperHTML';
+import {bind} from 'hyperhtml';
 
 /**
  * The HyperHTML view displaying the video player and channel details.

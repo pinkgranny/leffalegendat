@@ -1,4 +1,4 @@
-import {bind, wire} from 'hyperHTML';
+import {bind, wire} from 'hyperhtml';
 import config from '../../../config.json';
 
 /**
