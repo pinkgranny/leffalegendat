@@ -1,18 +1,36 @@
 // Take into use to override MDC default colors
-
-$mdc-theme-primary: #26a69a;
+/*
+$mdc-theme-primary: #fff;
 $mdc-theme-accent: #bd0707;
-$mdc-theme-background: #26a69a;
-
+$mdc-theme-background: #fff;
+*/
 
 // Import the individual components on-demand basis.
 @import "@material/button/mdc-button";
 @import "@material/card/mdc-card";
 @import "@material/list/mdc-list";
+@import "@material/tabs/mdc-tabs";
 @import "@material/toolbar/mdc-toolbar";
 @import "@material/typography/mdc-typography";
-@import "@material/textfield/mdc-textfield";
-@import "@material/textfield";
+
+// Header background that is filled with an image
+.header-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+// Vignette effect
+.header-background:after {
+  box-shadow: inset 0 0 4em 1.5em #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
 
 
 // Override some of their default behaviours
