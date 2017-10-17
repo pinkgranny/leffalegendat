@@ -1,8 +1,0 @@
-{
-  "gcmAPIKey": "YOUR_FIREBASE_API_KEY",
-  "vapidDetails": {
-    "subject": "YOUR_EMAIL_OR_URL",
-    "publicKey": "YOUR_PUBLIC_VAPID_KEY_SEE_NODE_PUSH",
-    "privateKey": "YOUR_PRIVATE_VAPID_KEY_SEE_NODE_PUSH"
-  }
-}
