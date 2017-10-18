@@ -1,4 +1,5 @@
 import {bind} from 'hyperhtml';
+import {MDCTextfield} from '@material/textfield';
 
 /**
  * A sample dummy
@@ -21,13 +22,14 @@ export default class Search {
   render() {
     console.log(`Render Search`);
 
-    return bind(this.element)`
+    const element = bind(this.element)`
     <div class="mdc-card">
       <section class="mdc-card__primary">
         <h1 class="mdc-card__title mdc-card__title--large">Näyttelijän nimi</h1>
       </section>
       <section class="mdc-card__supporting-text">
-        <div class="mdc-textfield mdc-textfield--upgraded mdc-textfield--fullwidth">
+        <div data-mdc-auto-init class="mdc-textfield mdc-textfield--upgraded
+          mdc-textfield--fullwidth">
           <input
             type="text"
             class="mdc-textfield__input"
@@ -40,15 +42,21 @@ export default class Search {
               Etunimi, sukunimi tai molemmat
           </label>
           <div class="mdc-textfield__bottom-line" style="transform-origin: 112.5px center"></div>
-        </section>
-        <section class="mdc-card__actions">
-          <button
-            class="mdc-button mdc-button--raised mdc-button--accent mdc-card__action">
-              Suorita haku
-          </button>
         </div>
+      </section>
+      <section class="mdc-card__actions">
+        <button
+          class="mdc-button mdc-button--raised mdc-button--accent mdc-card__action"
+          onclick="window.location.href='#haunTulokset'">
+            Suorita haku
+        </button>
       </section>
     </div>
     `;
+    const textField = element.querySelector('.mdc-textfield');
+    //console.log('heippa', MDCTextfield);
+    MDCTextfield.attachTo(textField);
+
+    return element;
   }
 }

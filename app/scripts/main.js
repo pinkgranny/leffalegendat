@@ -8,6 +8,7 @@ import fetchp from 'fetch-jsonp';
 import Player from './views/Player';
 // import Toolbar from './views/Toolbar';
 import Search from './views/Search';
+import MovieList from './views/MovieList';
 
 
 /**
@@ -186,7 +187,7 @@ async function init() {
   await fetch();
 
   // Default to the first channel
-  location.hash = `#channels/${channels[0].id}`;
+  location.hash = `#haku`;
 
   // Manually trigger route change.
   handleRouteChange();
@@ -232,6 +233,9 @@ async function handleRouteChange() {
     case 'haku':
       searchView.render();
       return;
+    case 'haunTulokset':
+      movieListView.render();
+      return;
     default:
       console.log(`No route handler found for ${hashPart}`);
       return init();
@@ -260,6 +264,9 @@ const searchView = new Search(main);
 
 const guide = new ChannelGuide(main);
 const player = new Player(main);
+
+const movieListView = new MovieList(main);
+
 
 // Update for UI state changes
 window.addEventListener('hashchange', handleRouteChange);
