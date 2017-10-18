@@ -1,16 +1,32 @@
-import {bind} from 'hyperhtml';
+import {bind, wire} from 'hyperhtml';
+import jsonDemo from '../demoMovieListResult.json';
 
 /**
- * A sample dummy
+ * A view for movies
  */
 export default class MovieList {
   /**
    * Default constructor for setting the values
    *
    * @param {HTMLElement} element - The HTML element to bind/adopt
+   * @param {Array<Object>} [movies=null] - The array containing data
    */
-  constructor(element) {
+  constructor(element, movies = null) {
     this.element = element;
+    this.actor = jsonDemo.results[0].name  ;
+    this.movies = jsonDemo.results[0].known_for;
+  }
+
+  getStyle(pictureName) {
+
+    const url = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${pictureName}`;
+    const style = `
+    height: 21.875rem;
+    background: url(${url});
+    background-size: cover;
+    background-repeat: no-repeat;
+    `;
+    return style;
   }
 
   /**
@@ -19,7 +35,8 @@ export default class MovieList {
    * @return {HTMLElement} The rendered element
    */
   render() {
-    console.log(`Render Search`);
+    console.log(`Render Search Results`);
+    console.log(`List is, ${this.movies.length} elements`);
 
     return bind(this.element)`
 
@@ -27,24 +44,24 @@ export default class MovieList {
 
     <div class="mdc-card">
       <section class="mdc-card__primary">
-        <h1 class="mdc-card__title mdc-card__title--large">Tauno Palo</h1>
+        <h1 class="mdc-card__title mdc-card__title--large">
+         ${ this.actor }
+        </h1>
       </section>
     </div>
 
     <!-- Sitten CARD listaksi elokuvat  -->
+    ${ this.movies.map((p) => wire()  `
 
     <div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo"
-      style="height: 21.875rem;
-      background-image: url(images/TuntematonSotilas.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;"
+      style="${this.getStyle(p.poster_path)}"
     >
       <section
         class="mdc-card__primary"
         style="background: rgba(0,117,108,0.7);"
       >
-        <h1 class="mdc-card__title mdc-card__title--large">Leffan nimi</h1>
-        <h2 class="mdc-card__subtitle">Kuvaus..</h2>
+        <h1 class="mdc-card__title mdc-card__title--large">${ p.original_title }</h1>
+        <h2 class="mdc-card__subtitle">${ p.overview.substring(0, 100) } ...</h2>
       </section>
       <section
         class="mdc-card__actions"
@@ -72,6 +89,6 @@ export default class MovieList {
     </div>
 
 
-    `;
+    `) } ` ;
   }
 }

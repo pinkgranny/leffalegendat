@@ -184,7 +184,7 @@ async function init() {
   }
 
   // Fetch the data
-  await fetch();
+  // await fetch();
 
   // Default to the first channel
   location.hash = `#haku`;
