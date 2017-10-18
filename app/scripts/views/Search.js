@@ -47,7 +47,7 @@ export default class Search {
       <section class="mdc-card__actions">
         <button
           class="mdc-button mdc-button--raised mdc-button--accent mdc-card__action"
-          onclick="window.location.href='#haunTulokset'">
+          onclick="window.location.href='#haku/${ my-textfield.value }'">
             Suorita haku
         </button>
       </section>

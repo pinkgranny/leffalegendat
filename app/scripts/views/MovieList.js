@@ -9,12 +9,12 @@ export default class MovieList {
    * Default constructor for setting the values
    *
    * @param {HTMLElement} element - The HTML element to bind/adopt
-   * @param {Array<Object>} [movies=null] - The array containing data
+   * @param {Array<Object>} [hakutulokset=null] - The array containing data
    */
-  constructor(element, movies = null) {
+  constructor(element, hakutulokset = null) {
     this.element = element;
-    this.actor = jsonDemo.results[0].name  ;
-    this.movies = jsonDemo.results[0].known_for;
+    this.actor = hakutulokset.results[0].name  ;
+    this.hakutulokset = hakutulokset.results[0].known_for;
   }
 
   getStyle(pictureName) {
@@ -39,7 +39,7 @@ export default class MovieList {
     console.log(`List is, ${this.movies.length} elements`);
 
     return bind(this.element)`
-      ${hakutulokset.toString()}
+
     <!-- Ensin otsikkona haetuttu nimi -->
 
     <div class="mdc-card">
