@@ -35,7 +35,8 @@ export default class Search {
             class="mdc-textfield__input"
             id="my-textfield"
             aria-controls="my-textfield-helptext"
-            data-demo-no-auto-js="">
+            data-demo-no-auto-js=""
+            value="">
           <label
             for="my-textfield"
             class="mdc-textfield__label">
@@ -47,7 +48,7 @@ export default class Search {
       <section class="mdc-card__actions">
         <button
           class="mdc-button mdc-button--raised mdc-button--accent mdc-card__action"
-          onclick="window.location.href='#haku/${ my-textfield.value }'">
+          onclick="window.location.href='#haku/ ${ document.getElementById('my-textfield').value }'">
             Suorita haku
         </button>
       </section>

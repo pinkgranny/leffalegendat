@@ -13,8 +13,7 @@ export default class MovieList {
    */
   constructor(element, hakutulokset = null) {
     this.element = element;
-    this.actor = hakutulokset.results[0].name  ;
-    this.hakutulokset = hakutulokset.results[0].known_for;
+    this.hakutulokset = hakutulokset;
   }
 
   getStyle(pictureName) {
@@ -38,6 +37,9 @@ export default class MovieList {
     console.log(`Render Search Results`);
     console.log(`List is, ${this.movies.length} elements`);
 
+    const actor = hakutulokset.results[0].name  ;
+    const movies = hakutulokset.results[0].known_for;
+
     return bind(this.element)`
 
     <!-- Ensin otsikkona haetuttu nimi -->
@@ -45,13 +47,13 @@ export default class MovieList {
     <div class="mdc-card">
       <section class="mdc-card__primary">
         <h1 class="mdc-card__title mdc-card__title--large">
-         ${ this.actor }
+         ${ actor }
         </h1>
       </section>
     </div>
 
     <!-- Sitten CARD listaksi elokuvat  -->
-    ${ this.movies.map((p) => wire()  `
+    ${ movies.map((p) => wire()  `
 
     <div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo"
       style="${this.getStyle(p.poster_path)}"
