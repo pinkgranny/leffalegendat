@@ -39,7 +39,7 @@ export default class MovieList {
     console.log(`List is, ${this.movies.length} elements`);
 
     return bind(this.element)`
-
+      ${hakutulokset.toString()}
     <!-- Ensin otsikkona haetuttu nimi -->
 
     <div class="mdc-card">

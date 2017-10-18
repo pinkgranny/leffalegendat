@@ -90,7 +90,7 @@ async function fetchStream(programId, mediaId) {
  * Fetches the YLE programs and services and maps them into easier to digest array.
  * The values get populated into 'services' and 'programs' globals.
  */
-async function fetch() {
+async function xfetch() {
   // Fetch the current program of all the services
   const services = await fetchServices();
   const newPrograms = await fetchCurrentPrograms(services.map((s) => s.id));
@@ -184,13 +184,31 @@ async function init() {
   }
 
   // Fetch the data
-  // await fetch();
+  // await xfetch();
 
   // Default to the first channel
   location.hash = `#haku`;
 
   // Manually trigger route change.
   handleRouteChange();
+}
+
+async function fetchMovieDB() {
+  const hashPart = location.hash.replace(/^#/, '');
+  const segments = hashPart.split('/');
+  const movieDbKey = config.movieDbKey;
+  var cast = segments[1];
+  var urli = `https://api.themoviedb.org/3/search/person?api_key=${movieDbKey}&query=${encodeURIComponent(cast)}`;
+  var response = await fetch(urli);
+  var json = await response.json();
+  if(json.results.length > 0) {
+    var urli = `https://api.themoviedb.org/3/person/${json.results[0].id}/movie_credits?api_key=${movieDbKey}`;
+    var response = await fetch(urli);
+    var json = await response.json();
+    hakutulokset = json;
+    console.log(json);
+  }
+  location.hash = `#haunTulokset`;
 }
 
 /**
@@ -232,6 +250,9 @@ async function handleRouteChange() {
       return;
     case 'haku':
       searchView.render();
+      if(hakutulokset.length > 0) {
+        fetchMovieDB();
+      }
       return;
     case 'haunTulokset':
       movieListView.render();
@@ -256,6 +277,7 @@ const baseUrl = 'https://external.api.yle.fi/v1';
 // Application state data
 let channels = [];
 let programs = [];
+let hakutulokset = [];
 
 // UI Elements
 // const toolbar = new Toolbar(header);
