@@ -9,8 +9,9 @@ export default class MovieList {
    *
    * @param {HTMLElement} element - The HTML element to bind/adopt
    */
-  constructor(element) {
+  constructor(element, hakutulokset = null) {
     this.element = element;
+    this.hakutulokset = hakutulokset;
   }
 
   /**
@@ -22,7 +23,7 @@ export default class MovieList {
     console.log(`Render Search`);
 
     return bind(this.element)`
-
+      ${hakutulokset.toString()}
     <!-- Ensin otsikkona haetuttu nimi -->
 
     <div class="mdc-card">
