@@ -184,7 +184,7 @@ async function init() {
   }
 
   // Fetch the data
-  // await xfetch();
+  await xfetch();
 
   // Default to the first channel
   location.hash = `#haku`;
@@ -208,7 +208,7 @@ async function fetchMovieDB() {
     hakutulokset = json;
     console.log(json);
   }
-  location.hash = `#haunTulokset`;
+  location.hash = `#haunTulokset/${cast}`;
 }
 
 /**
@@ -250,12 +250,12 @@ async function handleRouteChange() {
       return;
     case 'haku':
       searchView.render();
-      if(hakutulokset.length > 0) {
+      if(segments[1]) {
         fetchMovieDB();
       }
       return;
     case 'haunTulokset':
-      movieListView.render();
+      movieListView.render(hakutulokset);
       return;
     default:
       console.log(`No route handler found for ${hashPart}`);

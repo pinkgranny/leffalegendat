@@ -35,8 +35,7 @@ export default class Search {
             class="mdc-textfield__input"
             id="my-textfield"
             aria-controls="my-textfield-helptext"
-            data-demo-no-auto-js=""
-            value="">
+            data-demo-no-auto-js="">
           <label
             for="my-textfield"
             class="mdc-textfield__label">
@@ -48,7 +47,7 @@ export default class Search {
       <section class="mdc-card__actions">
         <button
           class="mdc-button mdc-button--raised mdc-button--accent mdc-card__action"
-          onclick="window.location.href='#haku/ ${ document.getElementById('my-textfield').value }'">
+          id="searchButton">
             Suorita haku
         </button>
       </section>
@@ -57,6 +56,8 @@ export default class Search {
     const textField = element.querySelector('.mdc-textfield');
     //console.log('heippa', MDCTextfield);
     MDCTextfield.attachTo(textField);
+
+    document.getElementById("searchButton").addEventListener("click", function() { document.location.hash = "#haku/" + document.getElementById("my-textfield").value }, false);
 
     return element;
   }

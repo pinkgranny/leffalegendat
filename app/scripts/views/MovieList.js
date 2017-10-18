@@ -11,9 +11,8 @@ export default class MovieList {
    * @param {HTMLElement} element - The HTML element to bind/adopt
    * @param {Array<Object>} [hakutulokset=null] - The array containing data
    */
-  constructor(element, hakutulokset = null) {
+  constructor(element) {
     this.element = element;
-    this.hakutulokset = hakutulokset;
   }
 
   getStyle(pictureName) {
@@ -33,12 +32,16 @@ export default class MovieList {
    *
    * @return {HTMLElement} The rendered element
    */
-  render() {
+  render(hakutulokset) {
+    const hashPart = location.hash.replace(/^#/, '');
+    const segments = hashPart.split('/');
+    var actor = segments[1];
     console.log(`Render Search Results`);
-    console.log(`List is, ${this.movies.length} elements`);
-
-    const actor = hakutulokset.results[0].name  ;
-    const movies = hakutulokset.results[0].known_for;
+    //console.log(`List is, ${this.movies.length} elements`);
+    console.log(hakutulokset);
+    //const actor = hakutulokset.results[0].name;
+    //const movies = hakutulokset.results[0].known_for;
+    const movies = hakutulokset.cast;
 
     return bind(this.element)`
 
