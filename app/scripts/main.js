@@ -9,7 +9,7 @@ import Player from './views/Player';
 // import Toolbar from './views/Toolbar';
 import Search from './views/Search';
 import MovieList from './views/MovieList';
-
+import TilaaPush from './views/tilaaPush';
 
 
 /**
@@ -265,6 +265,9 @@ async function handleRouteChange() {
       guide.programs = filtered;
       guide.render();
       return;
+    case 'tilaaPush':
+      tilaaPush.render();
+      return;
     case 'play':
       const contentId = segments[1];
       const mediaId = segments[2];
@@ -313,7 +316,7 @@ let hakutulokset = [];
 // const toolbar = new Toolbar(header);
 
 const searchView = new Search(main);
-
+const tilaaPush = new TilaaPush(main);
 const guide = new ChannelGuide(main);
 const player = new Player(main);
 
