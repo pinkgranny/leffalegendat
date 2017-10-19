@@ -23,6 +23,9 @@ export default class Search {
     console.log(`Render Search`);
 
     const element = bind(this.element)`
+
+    <!-- haku kentät  -->
+
     <div class="mdc-card">
       <section class="mdc-card__primary">
         <h1 class="mdc-card__title mdc-card__title--large">Näyttelijän nimi</h1>
@@ -51,7 +54,67 @@ export default class Search {
             Suorita haku
         </button>
       </section>
+      <section class="mdc-card__supporting-text"><p></p></section>
+
     </div>
+
+    <!-- tiimin esittely -->
+
+    <div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo"
+      style="height: 21.875rem;
+        background: url(./images/tiimi.jpg) ;
+        background-size: cover;
+        background-repeat: no-repeat;"
+    >
+      <section
+        class="mdc-card__primary"
+        style="background: rgba(0,117,108,0.7);"
+      >
+        <h1 class="mdc-card__title mdc-card__title--large">LeffaLegendat Tiimi</h1>
+        <h2 class="mdc-card__subtitle">Taina, Kaisa, Eero ja Teemu</h2>
+      </section>
+    </div>
+
+
+    <!-- API linkit -->
+
+<div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo"
+        >
+          <section
+            class="mdc-card__primary"
+            style="background: rgba(0,117,108,0.7);"
+          >
+            <h1 class="mdc-card__title mdc-card__title--large">Käytimme kahta APIa</h1>
+            <h2 class="mdc-card__subtitle"></h2>
+          </section>
+          <section
+            class="mdc-card__actions"
+            style="background: rgba(0,117,108,0.7);"
+          >
+            <button
+              class="
+                mdc-button
+                mdc-button--raised
+                mdc-button--accent
+                mdc-card__action"
+              onclick="window.location.href='http://developer.yle.fi/'"
+            >
+                YLE API
+            </button>
+            <button
+              class="
+                mdc-button
+                mdc-button--raised
+                mdc-button--accent
+                mdc-card__action"
+                onclick="window.location.href='https://www.themoviedb.org/documentation/api'"
+                target="_blank"
+            >
+              The Movide DB
+            </button>
+          </section>
+        </div>
+
     `;
     const textField = element.querySelector('.mdc-textfield');
     //console.log('heippa', MDCTextfield);
