@@ -58,9 +58,11 @@ export default class Search {
 
     </div>
 
+    <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
     <!-- tiimin esittely -->
 
-    <div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo"
+    <div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo mdc-layout-grid__cell"
       style="height: 21.875rem;
         background: url(./images/tiimi.jpg) ;
         background-size: cover;
@@ -78,7 +80,11 @@ export default class Search {
 
     <!-- API linkit -->
 
-<div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo"
+<div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo mdc-layout-grid__cell"
+style="height: 21.875rem;
+  background: url(./images/yle-api.jpg) ;
+  background-size: cover;
+  background-repeat: no-repeat;"
         >
           <section
             class="mdc-card__primary"
@@ -113,6 +119,8 @@ export default class Search {
               The Movide DB
             </button>
           </section>
+        </div>
+        </div>
         </div>
 
     `;

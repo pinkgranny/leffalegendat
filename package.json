@@ -64,6 +64,7 @@
   "dependencies": {
     "@material/button": "^0.7.0",
     "@material/card": "^0.2.9",
+    "@material/layout-grid": "^0.23.0",
     "@material/list": "^0.2.19",
     "@material/tabs": "^0.3.1",
     "@material/textfield": "^0.23.0",

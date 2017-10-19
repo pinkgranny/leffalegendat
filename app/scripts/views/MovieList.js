@@ -60,9 +60,12 @@ export default class MovieList {
     </div>
 
     <!-- Sitten CARD listaksi elokuvat  -->
+    <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+
     ${ movies.map((p) => wire()  `
 
-    <div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo"
+    <div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo mdc-layout-grid__cell"
       id="${ p.original_title }"
       style="${this.getStyle(p.poster_path)}"
     >
@@ -102,6 +105,10 @@ export default class MovieList {
     </div>
 
 
-    `) } ` ;
+    `) }
+
+    </div>
+    </div>
+   ` ;
   }
 }
