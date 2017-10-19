@@ -9,7 +9,7 @@ import Player from './views/Player';
 // import Toolbar from './views/Toolbar';
 import Search from './views/Search';
 import MovieList from './views/MovieList';
-
+import TilaaPush from './views/tilaaPush';
 
 /**
  * Fetch the current TV shows using JSONP and fetch JSONP polyfill.
@@ -187,7 +187,7 @@ async function init() {
   await fetch();
 
   // Default to the first channel
-  location.hash = `#haku`;
+  location.hash = `#tilaaPush`;
 
   // Manually trigger route change.
   handleRouteChange();
@@ -218,6 +218,9 @@ async function handleRouteChange() {
       // toolbar.render();
       guide.programs = filtered;
       guide.render();
+      return;
+    case 'tilaaPush':
+      tilaaPush.render();
       return;
     case 'play':
       const contentId = segments[1];
@@ -261,7 +264,7 @@ let programs = [];
 // const toolbar = new Toolbar(header);
 
 const searchView = new Search(main);
-
+const tilaaPush = new TilaaPush(main);
 const guide = new ChannelGuide(main);
 const player = new Player(main);
 
