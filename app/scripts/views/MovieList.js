@@ -38,7 +38,6 @@ export default class MovieList {
     var actor = segments[1];
     console.log(`Render Search Results`);
     //console.log(`List is, ${this.movies.length} elements`);
-    console.log(hakutulokset);
     //const actor = hakutulokset.results[0].name;
     //const movies = hakutulokset.results[0].known_for;
     const movies = hakutulokset.cast;
@@ -59,6 +58,7 @@ export default class MovieList {
     ${ movies.map((p) => wire()  `
 
     <div class="mdc-card mdc-card--theme-dark demo-card demo-card--bg-demo"
+      id="${ p.original_title }"
       style="${this.getStyle(p.poster_path)}"
     >
       <section
@@ -73,13 +73,14 @@ export default class MovieList {
         style="background: rgba(0,117,108,0.7);"
       >
         <button
+          disabled="disabled"
           class="
             mdc-button
             mdc-button--raised
             mdc-button--accent
             mdc-card__action"
         >
-            Action 1
+            Areenassa
         </button>
         <button
           class="
