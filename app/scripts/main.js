@@ -188,7 +188,7 @@ async function init() {
   await xfetch();
 
   // Default to the first channel
-  location.hash = `#tilaaPush`;
+  location.hash = `#haku`;
 
   // Manually trigger route change.
   handleRouteChange();
@@ -213,7 +213,7 @@ async function fetchMovieDB() {
     alert("Ei tuloksia");
     location.hash = `#haku`;
   }
-  
+
 }
 
 
@@ -291,8 +291,8 @@ async function handleRouteChange() {
       if(segments[1]) {
         hakutulokset = [];
         fetchMovieDB();
-        
-      }  
+
+      }
       return;
     case 'haunTulokset':
       movieListView.render(hakutulokset);
