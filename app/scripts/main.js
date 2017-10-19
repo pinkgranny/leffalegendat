@@ -207,44 +207,30 @@ async function fetchMovieDB() {
     var response = await fetch(urli);
     var json = await response.json();
     hakutulokset = json;
-    console.log(json);
     location.hash = `#haunTulokset/${cast}`;
-  }else{
+    YleDbMovie(hakutulokset);
+  } else {
     alert("Ei tuloksia");
     location.hash = `#haku`;
   }
-  
 }
 
-
-async function YleDbMovie() {
-  const hashPart = location.hash.replace(/^#/, '');
-  const segments = hashPart.split('/');
-  const movieDbKey = config.movieDbKey;
-  var cast = segments[1];
-  var urli = `https://external.api.yle.fi/v1/programs/items.json?app_id=de33c2d5&app_key=9b88244eba890a430125b4f19493188c&id&q&category=5-135&availability=ondemand&order=publication.starttime%3Adesc`;
-  var response = await fetchp(urli);
-  var json = await response.json();
-  console.log(json);
- /* if(json.results.length > 0) {
-    var urli = `https://api.themoviedb.org/3/person/${json.results[0].id}/movie_credits?api_key=${movieDbKey}`;
-    var response = await fetch(urli);
+async function YleDbMovie(hakutulokset) {
+  for (var i = 0; i < hakutulokset.cast.length; i++) {
+    var urli = `https://external.api.yle.fi/v1/programs/items.json?app_id=de33c2d5&app_key=9b88244eba890a430125b4f19493188c&id&q=${hakutulokset.cast[i].original_title}&category=5-135&availability=ondemand&order=publication.starttime%3Adesc`;
+    var response = await fetchp(urli);
     var json = await response.json();
-    hakutulokset = json;
     console.log(json);
-    location.hash = `#haunTulokset/${cast}`;
-  }else{
-    alert("Ei tuloksia");
-    location.hash = `#haku`;
+    for (var x = 0; x < json.data.length; x++) {
+      var title = json.data[x].title.fi;
+      if(new RegExp(hakutulokset.cast[i].original_title, 'i').test(title)) {
+        var listItem = document.getElementById(hakutulokset.cast[i].original_title);
+        listItem.querySelector("button[disabled='disabled']").disabled = "";
+        listItem.className += " in-areena";
+      }
+    }
   }
-  */
 }
-
-
-
-YleDbMovie();
-
-
 
 /**
  * Handles the URL (hash part) route change and update the application accordingly.
@@ -288,8 +274,8 @@ async function handleRouteChange() {
       if(segments[1]) {
         hakutulokset = [];
         fetchMovieDB();
-        
-      }  
+
+      }
       return;
     case 'haunTulokset':
       movieListView.render(hakutulokset);
