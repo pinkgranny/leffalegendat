@@ -222,9 +222,16 @@ async function YleDbMovie(hakutulokset) {
     var json = await response.json();
     console.log(json);
     for (var x = 0; x < json.data.length; x++) {
-      var title = json.data[x].title.fi;
-      if(new RegExp(hakutulokset.cast[i].original_title, 'i').test(title)) {
+      var titles = [];
+      if(json.data[x].originalTitle.und) {
+        titles.push(json.data[x].originalTitle.und);
+      }
+      if(json.data[x].title) {
+        titles.push(json.data[x].title.fi);
+      }
+      if(titles.indexOf(hakutulokset.cast[i].original_title) > -1) {
         var listItem = document.getElementById(hakutulokset.cast[i].original_title);
+        listItem.querySelector("button[disabled='disabled']").dataset.areenaurl = "https://areena.yle.fi/" + json.data[x].id;
         listItem.querySelector("button[disabled='disabled']").disabled = "";
         listItem.className += " in-areena";
       }

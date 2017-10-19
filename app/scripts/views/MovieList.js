@@ -49,7 +49,7 @@ export default class MovieList {
     <div class="mdc-card">
       <section class="mdc-card__primary">
         <h1 class="mdc-card__title mdc-card__title--large">
-         ${ actor }
+         Tulokset: "${ actor }"
         </h1>
       </section>
     </div>
@@ -79,6 +79,7 @@ export default class MovieList {
             mdc-button--raised
             mdc-button--accent
             mdc-card__action"
+          onclick="if(!this.disabled) window.open(this.dataset.areenaurl, '_blank');"
         >
             Areenassa
         </button>
