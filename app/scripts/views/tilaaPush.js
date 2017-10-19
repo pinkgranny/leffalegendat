@@ -14,6 +14,7 @@ export default class tilaaPush {
    */
   constructor(element) {
     this.element = element;
+    this.selectedDate = null;
   }
 
   /**
@@ -28,8 +29,10 @@ export default class tilaaPush {
     const picker = new MaterialDateTimePicker()
     .on('submit', (val) => {
           console.log(val.format("DD/MM/YYYY"));
-          console.log(val.format("hh:mm"))
-          console.log(val.format("A"))
+          console.log(val.format("hh:mm"));
+          console.log(val.format("A"));
+          this.selectedDate = val;
+          this.render();
         });
 
   //  .on('submit', (val) => console.log(`data: ${val}`))
@@ -46,8 +49,9 @@ export default class tilaaPush {
         <div data-mdc-auto-init class="mdc-textfield mdc-textfield--upgraded
           mdc-textfield--fullwidth">
           <input
+            value=${this.selectedDate}
             placeholder="Päivämäärä ja aika"
-            onfocus=${openPicker}
+            onfocus=${this.openPicker}
             type="text"
             class="mdc-textfield__input"
             id="my-textfield"
@@ -65,7 +69,7 @@ export default class tilaaPush {
         <section class="mdc-card__actions">
           <button
             class="mdc-button mdc-button--raised mdc-button--accent mdc-card__action"
-            onclick="window.location.href='#opening'">
+            onclick=${this.showNotification.bind(this)}>
               Lisää muistutus
           </button>
         </section>
@@ -74,14 +78,49 @@ export default class tilaaPush {
     </div>
     `;
 
-    function openPicker() {
-      console.log('opening')
-      picker.open()
-    }
-
     //console.log('heippa', MDCTextfield);
 
 
     return element;
   }
+
+    openPicker() {
+      console.log('opening')
+      picker.open()
+    }
+
+     showNotification(){
+      console.log('check if notification is allowed');
+
+      // Let's check if the browser supports notifications
+      if (!("Notification" in window)) {
+        alert("This browser does not support desktop notification");
+      }
+
+      // jos ei ole vielä lupaa, kysytään saadaanko se
+      if (Notification.permission !== "denied") {
+        Notification.requestPermission();
+      }
+
+      // Let's check whether notification permissions have already been granted
+      if (Notification.permission === "granted") {
+        // If it's okay let's create a notification
+        console.log('schedule notification 20 sec from now');
+        // haetaan ajanhetki nyt
+        var now = new Date().getTime();
+        // odotellaan, että aika kuluu
+        while(new Date().getTime() < now + 20000){
+          /* do nothing */
+        }
+        this.notifyMe('Leffasi on nyt katsottavissa!');
+      }
+
+    }
+
+     notifyMe(notiText) {
+        var notification = new Notification(notiText);
+    }
+
+
+
 }

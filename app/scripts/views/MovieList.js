@@ -83,14 +83,15 @@ export default class MovieList {
         >
             Areenassa
         </button>
-        <button
+        <button onclick="window.location.href='#tilaaPush'"
           class="
             mdc-button
             mdc-button--raised
             mdc-button--accent
             mdc-card__action"
         >
-            Action 2
+            Tilaa muistutus
+
         </button>
       </section>
     </div>
