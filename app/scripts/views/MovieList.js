@@ -16,8 +16,13 @@ export default class MovieList {
   }
 
   getStyle(pictureName) {
+    var url = '';
+    if(pictureName) {
+      url = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${pictureName}`;
+    } else {
+      url = '/images/default.jpg';
+    }
 
-    const url = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${pictureName}`;
     const style = `
     height: 21.875rem;
     background: url(${url});
