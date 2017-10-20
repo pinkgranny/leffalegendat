@@ -6,24 +6,22 @@ Code in the Woods oli huikea viiden päivän leiri, jonka aikana opimme tekemä�
 Tapahtuman aikana suunniteltiin ja rakennettiin mobiilisovellus 4 hengen pienryhmissä. Meidän ryhmäämme kuuluivat Eero, Kaisa, Taina ja Teemu.
 Leirin järjestivät **Barona Technologies ja Forenom**
 
-![Tiimi](/app/images/tiimi.jpg)
-
 ## Screenshotteja applikaatiosta
 
-**Etusivu**
+**Etusivu**:: 
 Haku näkymä ja linkit käytettyihin API palveluihin.
 ![Haku](/docs/screenshots/search.png)
 
-**Haun tulokset**
+**Haun tulokset**::
 Haun tulokset listautuvat näytön koosta riippuen 1-4 vierekkäin.
 ![Haku](/docs/screenshots/results.png)
 
-**Push-notifikaatio**
+**Push-notifikaatio**::
 PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata muistutuksia.
-![Haku](/docs/screenshots/notifikaatio.png)
+![notifikaatio](/docs/screenshots/notifikaatio.png)
 
 
-## Välineistä
+## Käytetyistä välineistä
 
 **Tech Stack**
 - PWA (webbisivun kehitys mobiiliapsiksi)
@@ -55,8 +53,10 @@ PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata mu
 - Trello
 
 ## Projektista
-[Kurssia varten rakennettu yksinkertainen Web-sovellus] (https://github.com/codeinthewoods/now-playing-yle), joka..
+[Kurssia varten rakennettu yksinkertainen Web-sovellus](https://github.com/codeinthewoods/now-playing-yle), joka..
 - toteuttaa Service Workereista Offline-tuen ja PUSH-viestit
 - käyttää YLE APIa
 - soveltaa Googlen Web Starter Kit - pohjaa
 **- toimii tämän appsin pohjana**
+
+Päätimme tiimimme kesken, että tämä jätetään siihen muotoon, johon saimme sen leirin aikana. Mikäli joku meistä intoutuu sen kanssa jatkamaaan tekee hän tästä oman branchin tai muuten kopion omaan gittiinsä. 
