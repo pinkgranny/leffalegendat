@@ -3,21 +3,21 @@ PWA study project that searches MovieDB API for actor names and then try finds t
 
 ## Code in the Woods
 [Code in the Woods](https://www.codeinthewoods.fi/) oli huikea viiden päivän leiri, jonka aikana opimme tekemään web-sovelluksia kännykälle PWA-tekniikalla. Samalla opimme kurssin mentoreilta käytäntöjä mm. käyttöliittymäsuunnittelusta, versionhallinnasta, työkaluista ja monista muista asioista.
-Tapahtuman aikana suunniteltiin ja rakennettiin mobiilisovellus 4 hengen pienryhmissä. Meidän ryhmäämme kuuluivat Eero, Kaisa, Taina ja Teemu. <br />
+Tapahtuman aikana suunniteltiin ja rakennettiin mobiilisovellus 4 hengen pienryhmissä. Meidän ryhmäämme kuuluivat Eero, Kaisa, Taina ja Teemu. <br /><br />
 Leirin järjestivät **Barona Technologies ja Forenom**
 
 ## Screenshotteja applikaatiosta
 
 **Etusivu**:: 
-Haku näkymä ja linkit käytettyihin API palveluihin.
+Haku näkymä ja linkit käytettyihin API palveluihin.<br />
 ![Haku](/docs/screenshots/search.png)
 
 **Haun tulokset**::
-Haun tulokset listautuvat näytön koosta riippuen 1-4 vierekkäin.
+Haun tulokset listautuvat näytön koosta riippuen 1-4 vierekkäin.<br />
 ![Haku](/docs/screenshots/results.png)
 
 **Push-notifikaatio**::
-PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata muistutuksia.
+PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata muistutuksia.<br />
 ![notifikaatio](/docs/screenshots/notification.png)
 
 <br /><br />
