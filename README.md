@@ -59,6 +59,14 @@ Pohja
 - toteuttaa Service Workereista Offline-tuen ja PUSH-viestit
 - käyttää YLE APIa
 - soveltaa Googlen Web Starter Kit - pohjaa
+<br />
 Näin päästiin suoraan asiaan tehokkaasti. 
-
-Päätimme tiimimme kesken, että tämä jätetään siihen muotoon, johon saimme sen leirin aikana. Mikäli joku meistä intoutuu sen kanssa jatkamaaan, tekee hän tästä oman branchin tai muuten kopion omaan gittiinsä. 
+<br /><br />
+Työskentelimme suunnilleen näin
+- ma: tiimiytyminen, tutustumisleikit, alustava hahmotelma appsille
+- ti: desing suunnittelu ja koodauksen aloitus
+- ke: koodausta, koodausta..
+- to: viimeistelyt ja pitch night
+- pe: wrap up, retro, fiilistelyt
+<br /><br />
+Päätimme tiimimme kesken, että tämä jätetään siihen muotoon, johon saimme sen leirin aikana. Mikäli joku meistä intoutuu sen kanssa jatkamaaan, tekee hän tästä [oman branchin tai muuten kopion omaan gittiinsä](https://help.github.com/articles/fork-a-repo/). 
