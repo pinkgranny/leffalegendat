@@ -53,12 +53,22 @@ PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata mu
 - Trello
 
 ## Projektista
-[Kurssia varten rakennettiin (järjestäjien toimesta) yksinkertainen Web-sovellus](https://github.com/codeinthewoods/now-playing-yle), joka **otettiin tämän appsin pohjaksi**
+[Kurssia varten rakennettiin (järjestäjien toimesta) yksinkertainen Web-sovellus](https://github.com/codeinthewoods/now-playing-yle), joka **otettiin tämän appsin pohjaksi**<br />
+Järjestäjät olivat myös valmistelleet meille [materiaalipaketin](https://docs.google.com/document/d/12res0aYeOJFOurSKr4p3UR8I95fQbn-smQpoAl966VU/edit?usp=sharing)
 <br /><br />
 Pohja
 - toteuttaa Service Workereista Offline-tuen ja PUSH-viestit
 - käyttää YLE APIa
 - soveltaa Googlen Web Starter Kit - pohjaa
+<br />
 Näin päästiin suoraan asiaan tehokkaasti. 
+<br />
 
-Päätimme tiimimme kesken, että tämä jätetään siihen muotoon, johon saimme sen leirin aikana. Mikäli joku meistä intoutuu sen kanssa jatkamaaan, tekee hän tästä oman branchin tai muuten kopion omaan gittiinsä. 
+Työskentelimme suunnilleen näin..
+<br /> **ma** tiimiytyminen, tutustumisleikit, alustava hahmotelma appsille
+<br /> **ti** desing suunnittelu ja koodauksen aloitus
+<br /> **ke** koodausta, koodausta..
+<br /> **to** viimeistelyt ja pitch night
+<br /> **pe** wrap up, retro, fiilistelyt
+
+Päätimme tiimimme kesken, että tämä jätetään siihen muotoon, johon saimme sen leirin aikana. Mikäli joku meistä intoutuu sen kanssa jatkamaaan, tekee hän tästä [oman branchin tai muuten kopion omaan gittiinsä](https://help.github.com/articles/fork-a-repo/). 
