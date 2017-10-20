@@ -1,8 +1,8 @@
 # LeffaLegendat
 PWA study project that searches MovieDB API for actor names and then try finds their movies from YLE API.
 
-## [Code in the Woods](https://www.codeinthewoods.fi/)
-Code in the Woods oli huikea viiden päivän leiri, jonka aikana opimme tekemään web-sovelluksia kännykälle PWA-tekniikalla. Samalla opimme kurssin mentoreilta käytäntöjä mm. käyttöliittymäsuunnittelusta, versionhallinnasta, työkaluista ja monista muista asioista.
+## Code in the Woods
+[Code in the Woods](https://www.codeinthewoods.fi/) oli huikea viiden päivän leiri, jonka aikana opimme tekemään web-sovelluksia kännykälle PWA-tekniikalla. Samalla opimme kurssin mentoreilta käytäntöjä mm. käyttöliittymäsuunnittelusta, versionhallinnasta, työkaluista ja monista muista asioista.
 Tapahtuman aikana suunniteltiin ja rakennettiin mobiilisovellus 4 hengen pienryhmissä. Meidän ryhmäämme kuuluivat Eero, Kaisa, Taina ja Teemu. <br />
 Leirin järjestivät **Barona Technologies ja Forenom**
 
