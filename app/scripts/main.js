@@ -216,8 +216,11 @@ async function fetchMovieDB() {
 }
 
 async function YleDbMovie(hakutulokset) {
+  const appId = config.appId;
+  const appKey = config.appKey;
+
   for (var i = 0; i < hakutulokset.cast.length; i++) {
-    var urli = `https://external.api.yle.fi/v1/programs/items.json?app_id=de33c2d5&app_key=9b88244eba890a430125b4f19493188c&id&q=${hakutulokset.cast[i].original_title}&category=5-135&availability=ondemand&order=publication.starttime%3Adesc`;
+    var urli = `https://external.api.yle.fi/v1/programs/items.json?app_id=${appId}&app_key=${appKey}&id&q=${hakutulokset.cast[i].original_title}&category=5-135&availability=ondemand&order=publication.starttime%3Adesc`;
     var response = await fetchp(urli);
     var json = await response.json();
     console.log(json);
