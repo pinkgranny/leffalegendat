@@ -3,7 +3,7 @@ PWA study project that searches MovieDB API for actor names and then try finds t
 
 ## [Code in the Woods](https://www.codeinthewoods.fi/)
 Code in the Woods oli huikea viiden päivän leiri, jonka aikana opimme tekemään web-sovelluksia kännykälle PWA-tekniikalla. Samalla opimme kurssin mentoreilta käytäntöjä mm. käyttöliittymäsuunnittelusta, versionhallinnasta, työkaluista ja monista muista asioista.
-Tapahtuman aikana suunniteltiin ja rakennettiin mobiilisovellus 4 hengen pienryhmissä. Meidän ryhmäämme kuuluivat Eero, Kaisa, Taina ja Teemu.
+Tapahtuman aikana suunniteltiin ja rakennettiin mobiilisovellus 4 hengen pienryhmissä. Meidän ryhmäämme kuuluivat Eero, Kaisa, Taina ja Teemu. <br />
 Leirin järjestivät **Barona Technologies ja Forenom**
 
 ## Screenshotteja applikaatiosta
@@ -18,9 +18,9 @@ Haun tulokset listautuvat näytön koosta riippuen 1-4 vierekkäin.
 
 **Push-notifikaatio**::
 PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata muistutuksia.
-![notifikaatio](/docs/screenshots/notifikaatio.png)
+![notifikaatio](/docs/screenshots/notification.png)
 
-
+<br /><br />
 ## Käytetyistä välineistä
 
 **Tech Stack**
@@ -53,10 +53,11 @@ PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata mu
 - Trello
 
 ## Projektista
-[Kurssia varten rakennettu yksinkertainen Web-sovellus](https://github.com/codeinthewoods/now-playing-yle), joka..
+[Kurssia varten rakennettiin (järjestäjien toimesta) yksinkertainen Web-sovellus](https://github.com/codeinthewoods/now-playing-yle), joka **otettiin tämän appsin pohjaksi**
+Pohja
 - toteuttaa Service Workereista Offline-tuen ja PUSH-viestit
 - käyttää YLE APIa
 - soveltaa Googlen Web Starter Kit - pohjaa
-**- toimii tämän appsin pohjana**
+Näin päästiin suoraan asiaan tehokkaasti. 
 
-Päätimme tiimimme kesken, että tämä jätetään siihen muotoon, johon saimme sen leirin aikana. Mikäli joku meistä intoutuu sen kanssa jatkamaaan tekee hän tästä oman branchin tai muuten kopion omaan gittiinsä. 
+Päätimme tiimimme kesken, että tämä jätetään siihen muotoon, johon saimme sen leirin aikana. Mikäli joku meistä intoutuu sen kanssa jatkamaaan, tekee hän tästä oman branchin tai muuten kopion omaan gittiinsä. 
