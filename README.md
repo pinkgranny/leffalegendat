@@ -8,16 +8,16 @@ Leirin järjestivät **Barona Technologies ja Forenom**
 
 ## Screenshotteja applikaatiosta
 
-**Etusivu**:: 
-Haku näkymä ja linkit käytettyihin API palveluihin.<br />
+### Etusivu 
+Haku näkymä ja linkit käytettyihin API palveluihin.<br /><br /><br />
 ![Haku](/docs/screenshots/search.png)
 
-**Haun tulokset**::
-Haun tulokset listautuvat näytön koosta riippuen 1-4 vierekkäin.<br />
+### Haun tulokset
+Haun tulokset listautuvat näytön koosta riippuen 1-4 vierekkäin.<br /><br /><br />
 ![Haku](/docs/screenshots/results.png)
 
-**Push-notifikaatio**::
-PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata muistutuksia.<br />
+###Push-notifikaatio
+PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata muistutuksia.<br /><br /><br />
 ![notifikaatio](/docs/screenshots/notification.png)
 
 <br /><br />
@@ -25,8 +25,8 @@ PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata mu
 
 **Tech Stack**
 - PWA (webbisivun kehitys mobiiliapsiksi)
--- Service Worker (offlinetuki ja notifikaatiot)
--- Web App Manifest (miten applikaatio näkyy mobiilisti)
+- -Service Worker (offlinetuki ja notifikaatiot)
+- -Web App Manifest (miten applikaatio näkyy mobiilisti)
 - SinglePageApp (vain index.html ja kaikki muu JS tiedostoissa)
 - Node.js
 - Git (versionhallinta)
@@ -54,6 +54,7 @@ PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata mu
 
 ## Projektista
 [Kurssia varten rakennettiin (järjestäjien toimesta) yksinkertainen Web-sovellus](https://github.com/codeinthewoods/now-playing-yle), joka **otettiin tämän appsin pohjaksi**
+<br /><br />
 Pohja
 - toteuttaa Service Workereista Offline-tuen ja PUSH-viestit
 - käyttää YLE APIa
