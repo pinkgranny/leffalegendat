@@ -13,10 +13,10 @@ Haku näkymä ja linkit käytettyihin API palveluihin.<br /><br /><br />
 ![Haku](/docs/screenshots/search.png)
 
 ### Haun tulokset
-Haun tulokset listautuvat näytön koosta riippuen 1-4 vierekkäin.<br /><br /><br />
+Haun tulokset listautuvat näytön koosta riippuen 1-4 vierekkäin. "Areenassa" -nappi aktivoituu, jos elokuva löytyy YLEn Areenasta. <br /><br /><br />
 ![Haku](/docs/screenshots/results.png)
 
-###Push-notifikaatio
+### Push-notifikaatio
 PWA tekniikan keskeisimpiä ominaisuuksia on käyttäjän mahdollisuus tilata muistutuksia.<br /><br /><br />
 ![notifikaatio](/docs/screenshots/notification.png)
 
