@@ -9,7 +9,7 @@ import Player from './views/Player';
 // import Toolbar from './views/Toolbar';
 import Search from './views/Search';
 import MovieList from './views/MovieList';
-import TilaaPush from './views/tilaaPush';
+import TilaaPush from './views/TilaaPush';
 
 
 /**

@@ -51,7 +51,7 @@ export default class tilaaPush {
           <input
             value=${this.selectedDate}
             placeholder="Päivämäärä ja aika"
-            onfocus=${this.openPicker}
+            onfocus=${openPicker}
             type="text"
             class="mdc-textfield__input"
             id="my-textfield"
@@ -80,14 +80,15 @@ export default class tilaaPush {
 
     //console.log('heippa', MDCTextfield);
 
+    function openPicker() {
+      console.log('opening')
+      picker.open()
+    }
 
     return element;
   }
 
-    openPicker() {
-      console.log('opening')
-      picker.open()
-    }
+
 
      showNotification(){
       console.log('check if notification is allowed');
