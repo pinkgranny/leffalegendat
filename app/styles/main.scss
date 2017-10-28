@@ -1,9 +1,10 @@
 // Take into use to override MDC default colors
-/*
-$mdc-theme-primary: #fff;
-$mdc-theme-accent: #bd0707;
-$mdc-theme-background: #fff;
-*/
+
+
+$mdc-theme-primary: #26a69a;
+$mdc-theme-accent: #00756c;
+$mdc-theme-background: #63d7cb;
+
 
 // Import the individual components on-demand basis.
 @import "@material/button/mdc-button";
@@ -12,6 +13,9 @@ $mdc-theme-background: #fff;
 @import "@material/tabs/mdc-tabs";
 @import "@material/toolbar/mdc-toolbar";
 @import "@material/typography/mdc-typography";
+@import "@material/textfield/mdc-textfield";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "material-datetime-picker/lib/scss/material-datetime-picker";
 
 // Header background that is filled with an image
 .header-background {
@@ -31,7 +35,6 @@ $mdc-theme-background: #fff;
   height: 100%;
   content: "";
 }
-
 
 // Override some of their default behaviours
 @import "overrides";
